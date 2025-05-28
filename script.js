@@ -81,6 +81,7 @@ DarkMode.addEventListener("click",()=>{
         mode="dark";
         document.body.style.backgroundColor="black";
         document.body.style.color="white";
+        DarkMode.style.border="2px solid black";
         for(let i=0;i<op.length;i++){
             op[i].style.border="10px solid white";
         }
@@ -94,6 +95,7 @@ DarkMode.addEventListener("click",()=>{
         mode="light";
         document.body.style.backgroundColor="white";
         document.body.style.color="black";
+        DarkMode.style.border="2px solid white";
         for(let i=0;i<op.length;i++){
             op[i].style.border="10px solid black";
         }
