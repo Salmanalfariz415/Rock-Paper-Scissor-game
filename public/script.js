@@ -144,5 +144,7 @@ const lose=[
     [1,3],
     [2,4],]
 
-
+if(performance.navigation.type==1){
+            window.location.href = '/start.html';
+        }
 

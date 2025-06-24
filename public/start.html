@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <button id="btn">Click for game</button>
+    <script>
+        let btn = document.getElementById("btn");
+        async function redirectToGame(){
+            let a = await fetch('/redirect',{method:"GET"});
+            // window.location.href=a
+            console.log(a.url);
+            window.location.href = a.url;
+        }
+        btn.addEventListener("click",()=>{
+            redirectToGame();
+        })
+        
+    </script>
+</body>
+</html>
