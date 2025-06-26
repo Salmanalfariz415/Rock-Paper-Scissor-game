@@ -7,19 +7,37 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+    <div id="container">
+        <h2>Rock Paper Scissors Game</h1>
+        <input type="text" id="input" placeholder="Enter your name">
     <button id="btn">Click for game</button>
+    </div>
+    
     <script>
         let btn = document.getElementById("btn");
+        let inp=document.getElementById("input");
+
         async function redirectToGame(){
             let a = await fetch('/redirect',{method:"GET"});
-            // window.location.href=a
-            console.log(a.url);
-            window.location.href = a.url;
+            let name=inp.value;
+            window.location.href=a.url+"?name="+`${encodeURIComponent(name)}`;
         }
         btn.addEventListener("click",()=>{
+            if(inp.value.trim() === "") {
+                alert("Please enter your name");
+                return;
+            }
             redirectToGame();
         })
-        
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                if(inp.value.trim() === "") {
+                    alert("Please enter your name");
+                    return;
+                }
+                redirectToGame();
+            }
+        });
     </script>
 </body>
 </html>

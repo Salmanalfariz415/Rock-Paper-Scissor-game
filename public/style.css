@@ -42,12 +42,74 @@ body{
 }
 #comp{
     display:flex;
-    margin-top: 80px;
+    position: absolute;
+    order:1;
 }
 #pers{
+    order: 1; 
+    position:absolute;
     display: flex;
-    margin-top: 50px;
+    justify-content: center;
 }
+#compName{
+    order:0;
+    position: relative;
+    margin-right: 60rem;
+        font-family: 'Poppins', sans-serif;
+
+
+}
+#playerName {
+    order: 0;
+    /* text-align: center; */
+    position: relative;
+    margin-top: 0rem;
+    margin-right: 60rem;
+    /* color: white; */
+    /* font-size: 1rem; */
+    padding-left: 1rem;
+    text-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+}
+
+#computer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    width:44rem;
+    padding-top: 0rem;
+    height: 14rem;
+    background-color: #ed8166;
+    position: relative;
+    border-radius: 50px;
+
+}
+
+#player{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+background: linear-gradient(to right, #fdcb6e 0%, #fdcb6e 22%, #ed8166 22%, #ed8166 74%, transparent 74%);
+    border:black 0px solid;
+    border-radius: 50px;
+    height: 14rem;
+    width: fit-content;
+    padding-right: -16rem;
+    /* padding-left: 16rem; */
+}
+#rightend{
+    height: 14rem;
+    width: 44rem;
+    border-radius: 50px;
+    position: absolute;
+    /* background-color: #045563; */
+    background: linear-gradient(to left, #ed8166 0%, #ed8166 10%,transparent 10%);
+    pointer-events: none;
+}
+
 #header{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -97,6 +159,6 @@ body{
     font-size: 1.5rem;
 }
 #congrats{
-    position: fixed;
+    position: absolute;
     top:6rem;
 }

@@ -7,6 +7,12 @@ let compScore=document.getElementById("compScore");
 let perScore=document.getElementById("perScore");
 let computerScore=0;
 let personScore=0;
+
+const params=new URLSearchParams(window.location.search);
+let name=params.get('name');
+console.log(name);
+perScore.innerHTML=`${name}`+": 0";;
+
 for(let i=3;i<op.length;i++){
 
     op[i].addEventListener("mouseover",()=>{
@@ -38,7 +44,7 @@ for(let i=3;i<op.length;i++){
                 if(compChoice==win[k][0] && i==win[k][1]){
                     congrats.innerHTML="🎉 Congratulations, You Won!";
                     personScore++;
-                    perScore.innerHTML="Player: "+personScore;
+                    perScore.innerHTML=`${name}`+":"+personScore;
 
                 }
                 else if(compChoice==lose[k][0] && i==lose[k][1]){
@@ -143,6 +149,7 @@ const lose=[
     [0,5],
     [1,3],
     [2,4],]
+
 
 if(performance.navigation.type==1){
             window.location.href = '/start.html';
